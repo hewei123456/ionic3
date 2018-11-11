@@ -1,0 +1,25 @@
+page-home {
+  .list {
+    width: 100%;
+    .item {
+      display: inline-block;
+      padding: 15px;
+      box-sizing: border-box;
+      width: 50%;
+      .img {
+        height: 100px;
+        width: 100%;
+      }
+      .item-name {
+        font-size: 16px;
+        float: left;
+      }
+      .item-price {
+        color: #F56C6C;
+        font-size: 16px;
+        text-align: right;
+        float: right;
+      }
+    }
+  }
+}

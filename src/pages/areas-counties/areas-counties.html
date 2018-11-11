@@ -1,0 +1,25 @@
+<!--
+  Generated template for the AreasCountiesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{city}}</ion-title>
+    <ion-buttons start></ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of counties" (click)="sel(item.value)">
+      {{ item.label }}
+    </button>
+  </ion-list>
+
+</ion-content>

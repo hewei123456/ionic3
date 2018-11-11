@@ -1,0 +1,33 @@
+<!--
+  Generated template for the CartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>回收车</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list  *ngIf="list.length>0">
+    <ion-item *ngFor="let item of list">
+      <ion-thumbnail item-start>
+        <img src="{{item.goods.goods_front_image}}">
+      </ion-thumbnail>
+      <h2>{{item.goods.name}}</h2>
+      <p>数量: {{item.nums}}（￥{{getPrice(item.nums, item.goods.market_price)}}）</p>
+      <button ion-button clear item-end (click)="showDeleteAlert(item.goods.id)">删除</button>
+    </ion-item>
+  </ion-list>
+  <button block ion-button  (click)="jumpToBook()"  *ngIf="list.length>0">
+    预 约
+  </button>
+
+  <button block ion-button (click)="jumpToHome()" *ngIf="list.length==0">
+    回收车空空如也，快去添加
+  </button>
+</ion-content>

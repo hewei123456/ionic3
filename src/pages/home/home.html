@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>首页</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="list" *ngIf="goods.length>0">
+    <div class="item" *ngFor="let item of goods" (click)="jumpToDetail(item)">
+      <img src="{{item.goods_front_image}}" class="img">
+      <p class="item-name">{{item.name}}</p>
+      <p class="item-price">￥{{item.market_price}}/{{item.unit}}</p>
+    </div>
+  </div>
+  <button block ion-button (click)="jumpToMine()" *ngIf="goods.length==0">
+    您所在地信息尚未开放任何回收服务
+  </button>
+</ion-content>

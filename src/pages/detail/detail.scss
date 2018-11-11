@@ -1,0 +1,28 @@
+page-detail {
+  ion-card-title {
+    span:nth-child(1) {
+      float: left;
+    }
+    span:nth-child(2) {
+      float: right;
+      color: #F56C6C;
+    }
+    table {
+      clear: both;
+    }
+  }
+  .mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgb(0, 0, 0);
+    filter: alpha(opacity=60);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+}
